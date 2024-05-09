@@ -21,9 +21,11 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
 //#include "led.h"
-#include "delay.h"
-#include "debug.h"
-
+//#include "delay.h"
+//#include "debug.h"
+#include "usb_lib.h"
+#include "usb_desc.h"
+#include "usb_pwr.h"
 /** @addtogroup STM32F10x_StdPeriph_Examples
   * @{
   */
@@ -54,14 +56,17 @@
   */
 int main(void)
 {
-    SystemInit();
-    SysTick_Init(72);
-    DebugInit();
-    DEBUG(DEBUG_INFO,"init over\n");
+//    SysTick_Init(72);
+//    DebugInit();
+//    DEBUG(DEBUG_INFO,"init over\n");
+    Set_System();
+    Set_USBClock();
+    USB_Interrupts_Config();
+    USB_Init();
 
     while (1)
     {
-        
+
     }
 }
 
