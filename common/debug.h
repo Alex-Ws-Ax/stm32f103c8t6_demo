@@ -2,6 +2,11 @@
 #define __DEBUG_H_
 #include <stdio.h>
 
+#define     DEBUG_UART1         1
+#define     DEBUG_UART2         2
+#define     DEBUG_UART3         3
+#define     DEBUG_UART4         4
+#define     DEBUG_UART5         5
 
 #define DEBUG_EN       1
 
